@@ -2,6 +2,8 @@ services:
   webapp:
     build: .
     container_name: flask-oidc-rp-app
+    env_file:
+      - .env
     ports:
-      - "5000:5000"
+      - "${APP_PORT:-5000}:${APP_PORT:-5000}"
     restart: always
