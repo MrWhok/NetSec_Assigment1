@@ -36,3 +36,9 @@ services:
     depends_on:
       postgres-kc:
         condition: service_healthy
+    networks:
+      - netsec-bridge
+
+networks:
+  netsec-bridge:
+    external: true
