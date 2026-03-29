@@ -30,6 +30,9 @@ services:
       KC_BOOTSTRAP_ADMIN_PASSWORD: admin
       KC_HOSTNAME_STRICT: "false"
       KC_HOSTNAME_STRICT_HTTPS: "false"
+      KC_SPI_TRUSTSTORE_FILE_FILE: /opt/keycloak/conf/trustore.jks
+      KC_SPI_TRUSTSTORE_FILE_PASSWORD: password
+      KC_SPI_TRUSTSTORE_FILE_HOSTNAME_VERIFICATION_POLICY: ANY
     ports:
       - "8443:8443"
     volumes:
