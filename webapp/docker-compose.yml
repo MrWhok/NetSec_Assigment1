@@ -1,0 +1,7 @@
+services:
+  webapp:
+    build: .
+    container_name: flask-oidc-rp-app
+    ports:
+      - "5000:5000"
+    restart: always
