@@ -1,0 +1,13 @@
+services:
+  webapp:
+    build: .
+    container_name: flask-oidc-rp-app-jelek
+    ports:
+      - "5000:5000"
+    restart: always
+    networks:
+      - netsec-bridge
+
+networks:
+  netsec-bridge:
+    external: true
